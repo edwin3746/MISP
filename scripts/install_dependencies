@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo mkdir /test/vol/cortex
+sudo mv application.conf /test/vol/cortex
