@@ -4,8 +4,12 @@ files:
   - source: /docker-compose.yml
     destination: /home/ubuntu
   - source: /application.conf
-    destination: /home/ubuntu/
+    destination: /home/ubuntu
 hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 300
+      runas: root
   ApplicationStart:
     - location: scripts/start_hive
       timeout: 300
