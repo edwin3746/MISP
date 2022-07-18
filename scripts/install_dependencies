@@ -2,4 +2,3 @@
 sudo mkdir /test/
 sudo mkdir /test/vol/
 sudo mkdir /test/vol/cortex
-sudo mv application.conf /test/vol/cortex
