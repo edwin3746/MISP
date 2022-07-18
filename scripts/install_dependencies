@@ -1,4 +1,0 @@
-#!/bin/bash
-sudo mkdir /test/
-sudo mkdir /test/vol/
-sudo mkdir /test/vol/cortex
