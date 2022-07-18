@@ -6,9 +6,13 @@ files:
   - source: /application.conf
     destination: /home/ubuntu
 hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 100
+      runas: root
   ApplicationStart:
     - location: scripts/start_hive
-      timeout: 300
+      timeout: 100
       runas: root
 
 
