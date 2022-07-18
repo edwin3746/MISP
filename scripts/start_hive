@@ -1,2 +1,4 @@
 #!/bin/bash
+sudo mkdir /test/vol/cortex
+sudo cp application.conf /test/vol/cortex
 sudo docker-compose up
