@@ -1,0 +1,11 @@
+version: "2"
+services:
+  thehive:
+    image: thehiveproject/thehive4:latest
+    ports:
+      - "0.0.0.0:9000:9000"
+#    command:
+#      --cortex-port 9001
+#      --cortex-keys A3wppZabepHR0eweSf59WPggEf11OIx7
+    volumes:
+      - ./vol/thehive/application.conf:/etc/thehive/application.conf
