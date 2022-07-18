@@ -1,5 +1,2 @@
 #!/bin/bash
-sudo mkdir -p test/vol/cortex
-sudo mv /home/ubuntu/application.conf test/vol/cortex
-cd ~
 sudo docker-compose up
