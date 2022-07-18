@@ -3,13 +3,12 @@ os: linux
 files:
   - source: /docker-compose.yml
     destination: /home/ubuntu
+  - source: /application.conf
+    destination: /home/ubuntu/
 hooks:
   ApplicationStart:
     - location: scripts/start_hive
       timeout: 300
       runas: root
-  ApplicationStop:
-    - location: scripts/stop_hive
-      timeout: 300
-      runas: root
+
 
