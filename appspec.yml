@@ -8,11 +8,11 @@ files:
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
-      timeout: 100
+      timeout: 300
       runas: root
   ApplicationStart:
     - location: scripts/start_hive
-      timeout: 100
+      timeout: 300
       runas: root
 
 
