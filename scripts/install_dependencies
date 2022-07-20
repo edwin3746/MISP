@@ -2,4 +2,6 @@
 mkdir -p /home/ubuntu/test/vol/cortex
 git clone https://github.com/TheHive-Project/Cortex-Analyzers.git /home/ubuntu/test/vol/cortex
 cd /opt/cortex
-apt update && apt install -y python3-pip && rm -rf /var/lib/apt/lists/*
+sudo apt update && apt install -y python3-pip && rm -rf /var/lib/apt/lists/*
+sudo pip3 install ldap3 requests
+sudo for I in $(find analyzers -name 'requirements.txt'); do pip3 install -r $I || true; done
