@@ -2,7 +2,7 @@ version: '3'
 services:
   misp:
     image: coolacid/misp-docker:core-latest
-    restart: unless-stopped
+    restart: always
     depends_on: 
       - misp_mysql
     ports:
@@ -31,7 +31,7 @@ services:
 
   misp_mysql:
     image: mysql/mysql-server:5.7
-    restart: unless-stopped
+    restart: always
     volumes:
       - mispsqldata:/var/lib/mysql   
     environment:
@@ -43,10 +43,12 @@ services:
       - SOC_NET
   redis:
     image: redis:5.0.6
+    restart: always
     networks:
       - SOC_NET
   misp-modules:
     image: coolacid/misp-docker:modules-latest
+    restart: always
     environment:
       - "REDIS_BACKEND=redis"
     depends_on:
