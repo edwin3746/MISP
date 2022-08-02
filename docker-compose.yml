@@ -25,7 +25,7 @@ services:
       - "INIT=true"         
       - "CRON_USER_ID=1"   
       - "REDIS_FQDN=redis"
-      - "HOSTNAME=https://10.200.200.253"
+      - "HOSTNAME=https://54.151.253.253"
     networks:
       - SOC_NET
 
