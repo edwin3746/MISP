@@ -9,7 +9,7 @@ hooks:
       runas: root
       timeout: 400
   ValidateService:
-    - location: scripts/after_misp_install.sh
+    - location: scripts/after_misp_install
       timeout: 300
       runas: root
 
