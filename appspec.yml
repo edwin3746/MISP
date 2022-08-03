@@ -12,8 +12,5 @@ hooks:
     - location: scripts/start_misp
       runas: root
       timeout: 1000
-  ValidateService:
-    - location: scripts/after_misp_install
-      timeout: 300
-      runas: root
+
 
