@@ -13,19 +13,9 @@ services:
       - "./logs/:/var/www/MISP/app/tmp/logs/"
       - "./files/:/var/www/MISP/app/files"
       - "./ssl/:/etc/nginx/certs"
-    environment:
-      - MYSQL_HOST=misp_mysql
-      - MYSQL_DATABASE=mispdb
-      - MYSQL_USER=mispuser
-      - MYSQL_PASSWORD=misppass
-      - MISP_ADMIN_EMAIL=mispadmin@lab.local
-      - MISP_ADMIN_PASSPHRASE=mispadminpass
-      - MISP_BASEURL=localhost
-      - TIMEZONE=Europe/London
-      - "INIT=true"         
-      - "CRON_USER_ID=1"   
-      - "REDIS_FQDN=redis"
-      - "HOSTNAME=${value1}"
+    env_file:
+      - ./myenv.env
+
     networks:
       - SOC_NET
 
