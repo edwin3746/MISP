@@ -1,4 +1,4 @@
 #!/bin/bash
 cd /home/ubuntu/test
 sudo docker-compose up > /dev/null 2> /dev/null < /dev/null &
-sleep 4m 
+sleep 5m 
