@@ -4,13 +4,13 @@ files:
   - source: /docker-compose.yml
     destination: /home/ubuntu/test
 hooks:
-  AfterInstall:
-    - location: scripts/hostnameChange.sh
-      timeout: 300
-      runas: root
   ApplicationStart:
     - location: scripts/start_misp
       runas: root
       timeout: 400
+  ValidateService:
+    - location: scripts/after_misp_install.sh
+      timeout: 300
+      runas: root
 
 
