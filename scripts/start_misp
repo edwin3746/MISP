@@ -5,4 +5,4 @@ value1="${value}${EXTERNAL_IP}"
 export value1
 cd /home/ubuntu/test
 sudo docker-compose up > /dev/null 2> /dev/null < /dev/null &
-sleep 5m 
+sleep 4m 
