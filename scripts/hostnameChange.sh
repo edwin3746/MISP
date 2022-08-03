@@ -1,7 +1,7 @@
 #!/bin/bash
-sudo mv /home/ubuntu/myenv.env /home/ubuntu/test/
 cd ~
 EXTERNAL_IP=$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')
 value="https://"
 value1="${value}${EXTERNAL_IP}"
-echo '"HOSTNAME=${value1}"' >> /home/ubuntu/test/myenv.env
+echo value1 >> myfile.txt
+
