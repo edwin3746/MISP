@@ -1,6 +1,6 @@
 #!/bin/bash
-#cd ~
-#ip4=$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')
-#value="https://"
-#value1="${value}${ip4}"
-#sed -Ei "/(baseurl'[^']*')[^']*/s~~\1$value1~" /home/ubuntu/test/server-configs/config.php
+cd ~
+ip4=$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')
+value="https://"
+value1="${value}${ip4}"
+sed -Ei "/(baseurl'[^']*')[^']*/s~~\1$value1~" /home/ubuntu/test/server-configs/config.php
