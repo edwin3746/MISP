@@ -25,7 +25,7 @@ services:
       - "INIT=true"         
       - "CRON_USER_ID=1"   
       - "REDIS_FQDN=redis"
-      - "HOSTNAME=${value1}"
+      - "HOSTNAME=https://3.1.18.219"
 
     networks:
       - SOC_NET
@@ -49,7 +49,7 @@ services:
       - SOC_NET
   misp-modules:
     image: coolacid/misp-docker:modules-latest
-    restart: always
+    restart: unless-stopped
     environment:
       - "REDIS_BACKEND=redis"
     depends_on:
