@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /docker-compose.yml
     destination: /home/ubuntu/test
-   - source: /myenv.env
+  - source: /myenv.env
     destination: /home/ubuntu
 hooks:
   AfterInstall:
