@@ -1,4 +1,8 @@
 #!/bin/bash
+EXTERNAL_IP=$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')
+value="https://"
+value1="${value}${EXTERNAL_IP}"
+export value1
 cd /home/ubuntu/test
 sudo docker-compose up > /dev/null 2> /dev/null < /dev/null &
 sleep 5m 
