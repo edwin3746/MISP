@@ -26,7 +26,6 @@ services:
       - "CRON_USER_ID=1"   
       - "REDIS_FQDN=redis"
       - "HOSTNAME=https://10.200.200.253"
-
     networks:
       - SOC_NET
 
@@ -44,12 +43,10 @@ services:
       - SOC_NET
   redis:
     image: redis:5.0.6
-    restart: unless-stopped
     networks:
       - SOC_NET
   misp-modules:
     image: coolacid/misp-docker:modules-latest
-    restart: unless-stopped
     environment:
       - "REDIS_BACKEND=redis"
     depends_on:
