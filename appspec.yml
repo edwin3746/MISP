@@ -4,6 +4,10 @@ files:
   - source: /docker-compose.yml
     destination: /home/ubuntu/test
 hooks:
+  BeforeInstall:
+    - location: scripts/hostnameChange.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
     - location: scripts/start_misp
       runas: root
