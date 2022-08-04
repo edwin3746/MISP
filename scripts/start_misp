@@ -2,4 +2,4 @@
 sleep 4m
 cd /home/ubuntu/test
 docker-compose up > /dev/null 2> /dev/null < /dev/null &
-sleep 5m 
+sleep 8m 
