@@ -1,8 +1,0 @@
-#!/bin/bash
-cd /home/ubuntu
-sudo apt install net-tools        
-sudo apt-get -y update
-sudo apt-get remove docker docker-engine docker.io
-sudo apt-get update
-sudo apt install -y docker.io
-sudo snap install docker    
