@@ -1,0 +1,17 @@
+#!/bin/bash
+cd /home/ubuntu
+sudo rm -rf /var/lib/cloud/instance
+sudo rm -rf /var/lib/cloud/instances
+sudo apt install net-tools        
+sudo apt-get -y update
+sudo apt install -y ruby-full
+sudo apt-get-y install wget
+sudo wget https://aws-codedeploy-ap-southeast-1.s3.ap-southeast-1.amazonaws.com/latest/install
+sudo chmod +x ./install
+sudo ./install auto
+sudo apt-get install -y python-pip
+sudo pip install awscli
+sudo apt-get remove docker docker-engine docker.io
+sudo apt-get update
+sudo apt install -y docker.io
+sudo snap install docker
