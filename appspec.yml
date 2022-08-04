@@ -7,7 +7,7 @@ hooks:
   ApplicationStart:
     - location: scripts/start_misp
       runas: root
-      timeout: 400
+      timeout: 1200
   ValidateService:
     - location: scripts/after_misp_install
       timeout: 300
