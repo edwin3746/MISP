@@ -1,13 +1,7 @@
 version: '3'
 services:
-  # This is capible to relay via gmail, Amazon SES, or generic relays
-  # See: https://hub.docker.com/r/namshi/smtp
-  mail:
-    image: namshi/smtp
-
   redis:
     image: redis:5.0.6
-
   db:
     image: mysql:8.0.19
     command: --default-authentication-plugin=mysql_native_password
