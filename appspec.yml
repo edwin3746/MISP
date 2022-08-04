@@ -4,10 +4,6 @@ files:
   - source: /docker-compose.yml
     destination: /home/ubuntu/test
 hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies
-      runas: root
-      timeout: 1000
   ApplicationStart:
     - location: scripts/start_misp
       runas: root
